@@ -9,6 +9,7 @@ int main() {
     float area;
     float pib;
     int pontos;
+    float densidade;
 
     printf("Digite o número da carta: ");
     scanf("%d", &carta);
@@ -23,7 +24,7 @@ int main() {
     scanf("%s", nome);
 
     printf("Digite a população: ");
-    scanf("%d", &populacao);
+    scanf("%f", &populacao);
 
     printf("Digite a area em km²: ");
     scanf("%f", &area);
@@ -34,15 +35,19 @@ int main() {
     printf("Digite o número de pontos turístucos: ");
     scanf("%d", &pontos);
 
+    densidade = populacao / area;
+    
+
     printf("Dados da carta\n");
     printf("Número da carta: %d\n", carta);
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codigo);
     printf("Nome da cidade: %s\n", nome);
-    printf("População: %d\n", populacao);
-    printf("Área: %f km²\n", area);
-    printf("PIB: %f bilhóes de reais\n", pib);
+    printf("População: %.3f\n", populacao);
+    printf("Área: %.3f km²\n", area);
+    printf("PIB: %.2f bilhóes de reais\n", pib);
     printf("Pontos turísticos: %d\n", pontos);
     printf("Total de pontos: %d\n", pontos);
     printf("Total de pontos da carta: %d\n", pontos);
+    printf("A densidade populacional é: %.2f habitantes por km²\n", populacao / area);
 }
